@@ -1,0 +1,64 @@
+{
+  "name": "angular-super-validator",
+  "version": "1.0.0",
+  "description": "Angular4 Deep Form Validator",
+  "main": "dist/index",
+  "typings": "dist/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naologic/angular-super-validator.git"
+  },
+  "keywords": [
+    "angular",
+    "angular4",
+    "forms",
+    "validator",
+    "formcontrol",
+    "formgroup",
+    "formarray"
+  ],
+  "author": "c3zar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naologic/angular-super-validator/issues"
+  },
+  "homepage": "https://github.com/naologic/angular-super-validator#readme",
+  "devDependencies": {
+    "@angular/animations": "^5.0.0-rc.5",
+    "@angular/common": "^5.0.0-rc.5",
+    "@angular/compiler": "^5.0.0-rc.5",
+    "@angular/core": "^5.0.0-rc.5",
+    "@angular/forms": "^5.0.0-rc.5",
+    "@angular/http": "^5.0.0-rc.5",
+    "@angular/platform-browser": "^5.0.0-rc.5",
+    "@angular/platform-browser-dynamic": "^5.0.0-rc.5",
+    "@angular/router": "^5.0.0-rc.5",
+    "core-js": "^2.4.1",
+    "lodash": "^4.17.4",
+    "popper.js": "^1.12.5",
+    "rxjs": "^5.4.2",
+    "zone.js": "^0.8.14",
+    "@angular/cli": "^1.5.0-beta.4",
+    "@angular/compiler-cli": "^5.0.0-rc.5",
+    "@angular/language-service": "^5.0.0-rc.5",
+    "@types/jasmine": "^2.6.0",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/node": "^8.0.46",
+    "codelyzer": "~3.2.0",
+    "jasmine-core": "^2.8.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "karma": "~1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "^5.2.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  }
+}
