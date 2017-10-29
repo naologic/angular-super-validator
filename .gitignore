@@ -38,7 +38,8 @@ build/Release
 node_modules/
 jspm_packages/
 dist/
-.idea
+.idea/codeStyleSettings.xml
+
 
 
 # Typescript v1 declaration files
