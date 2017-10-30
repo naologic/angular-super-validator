@@ -1,4 +1,6 @@
 # angular-super-validator
+[![npm version](https://badge.fury.io/js/angular-super-validator.svg)](https://badge.fury.io/js/angular-super-validator)
+
 A form validator library for deep validation and error extraction from Angular Forms
 
 ## Install
