@@ -38,7 +38,7 @@ build/Release
 node_modules/
 jspm_packages/
 dist/
-.idea/codeStyleSettings.xml
+.idea/
 
 
 
