@@ -1,9 +1,9 @@
 # angular-super-validator
 [![npm version](https://badge.fury.io/js/angular-super-validator.svg)](https://badge.fury.io/js/angular-super-validator)
-[![npm](https://img.shields.io/npm/v/angular-super-validator.svg)][npm-badge-url]
-[![npm](https://img.shields.io/npm/v/angular-super-validator/next.svg)][npm-badge-url]
-[![npm](https://img.shields.io/npm/l/angular-super-validator.svg)][npm-badge-url]
-[![npm](https://img.shields.io/npm/dm/angular-super-validator.svg)][npm-badge-url]
+[![npm](https://img.shields.io/npm/v/angular-super-validator.svg)]
+[![npm](https://img.shields.io/npm/v/angular-super-validator/next.svg)]
+[![npm](https://img.shields.io/npm/l/angular-super-validator.svg)]
+[![npm](https://img.shields.io/npm/dm/angular-super-validator.svg)]
 
 
 A form validator library for deep validation and error extraction from Angular Forms
