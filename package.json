@@ -1,6 +1,6 @@
 {
   "name": "angular-super-validator",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Angular4 Deep Form Validator",
   "main": "dist/index",
   "typings": "dist/index",
