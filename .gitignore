@@ -64,3 +64,4 @@ typings/
 .env
 
 
+.idea/workspace.xml
