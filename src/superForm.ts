@@ -95,13 +95,13 @@ export class SuperForm {
    * @param object
    * @returns {{} & any}
    */
-  public static flatten(object) {
+  public static flatten(object, sep = '/') {
     return Object.assign( {}, ...function _flatten( objectBit, path = '' ) {
       return [].concat(
         ...Object.keys( objectBit )
           .map(key => typeof objectBit[ key ] === 'object' ?
-            _flatten( objectBit[ key ], `${ path }/${ key }` )
-            : ( { [ `${ path }/${ key }` ]: objectBit[ key ] } )
+            _flatten( objectBit[ key ], `${ path ? path + sep : path }${ key }` )
+            : ( { [ `${ path ? path + sep : path }${ key }` ]: objectBit[ key ] } )
         )
       );
     }( object ) );
