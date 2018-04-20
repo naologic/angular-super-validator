@@ -9,7 +9,7 @@ export class RichValidator {
     return btoa(str);
   }
 
-  public email(): ValidatorFn {
+  public static email(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       const error: ValidationErrors = { email: false };
@@ -22,7 +22,7 @@ export class RichValidator {
     }
   }
 
-  public phone(): ValidatorFn {
+  public static phone(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       let regex = /^[\s()+-]*([0-9][\s()+-]*){6,20}(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/i;
       if (!control.value || !regex.test(control.value)) {
@@ -43,4 +43,29 @@ export class RichValidator {
       return control.value > min && control.value < max ?  null : {'between': false};
     };
   }
+
+  public creditCard():ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const regex = /[^0-9-\s]+/;
+      if (!control.value || regex.test(control.value)) return {'creditCard': false};
+
+      let nCheck = 0;
+      let bEven = false;
+      let value = control.value.replace(/\D/g, "");
+
+      for (let n = value.length - 1; n >= 0; n--) {
+        var cDigit = value.charAt(n),
+            nDigit = parseInt(cDigit, 10);
+
+        if (bEven) {
+          if ((nDigit *= 2) > 9) nDigit -= 9;
+        }
+
+        nCheck += nDigit;
+        bEven = !bEven;
+      }
+      return (nCheck % 10) == 0 ? null : {'creditCard': false};
+    }
+  }
+
 }
