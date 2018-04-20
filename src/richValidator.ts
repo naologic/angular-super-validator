@@ -44,7 +44,7 @@ export class RichValidator {
     };
   }
 
-  public creditCard():ValidatorFn {
+  public static creditCard():ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       const regex = /[^0-9-\s]+/;
       if (!control.value || regex.test(control.value)) return {'creditCard': false};
