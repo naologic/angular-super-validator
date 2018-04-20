@@ -68,4 +68,20 @@ export class RichValidator {
     }
   }
 
+  public cvv(number: string): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null =>  {
+       if(!control.value || isNaN(control.value) || !number ){
+         return  {'cvv': false};
+       }
+       // AMEX
+       const re = new RegExp("^3[47]");
+       if (number.match(re) != null){
+         return control.value.length === 4 ? null : {'cvv': false};
+       }
+
+       return control.value.length === 3 ? null : {'cvv': false};
+    }
+  }
+
+
 }
