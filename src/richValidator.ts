@@ -22,6 +22,16 @@ export class RichValidator {
     }
   }
 
+  public phone(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      let regex = /^[\s()+-]*([0-9][\s()+-]*){6,20}(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/i;
+      if (!control.value || !regex.test(control.value)) {
+        return {'phone': false}
+      }
+      return null;
+    };
+  }
+
   public static between(min: number, max: number, inclusive?: boolean): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       if (!control.value || !min || !max) {
